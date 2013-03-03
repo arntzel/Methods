@@ -17,13 +17,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    int floatAnswer = [self addition:3 andFloat:10.9];
+    NSLog(@"floatAnswer %i",floatAnswer);
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(int)addition:(int)integer andFloat:(float)floatParameter{
+
+    float answer = integer + floatParameter;
+    NSLog(@"%f",answer);
+    return answer;
+}
+
+
+-(void)printFloats:(float)float1 secondFloat:(float)float2{
+    NSLog(@"float1: %f float2: %f",float1, float2);
 }
 
 @end
